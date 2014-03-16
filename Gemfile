@@ -37,6 +37,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'rails_12factor', group: :production
+
 # CSS Checkpoint, add Twitter Boostrap CSS framework
 gem 'bootstrap-sass', '~> 3.1.1'
 
