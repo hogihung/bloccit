@@ -42,6 +42,9 @@ gem 'rails_12factor', group: :production
 # CSS Checkpoint, add Twitter Boostrap CSS framework
 gem 'bootstrap-sass', '~> 3.1.1'
 
+# Seeding the database checkpoint
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
