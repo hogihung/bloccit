@@ -45,14 +45,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # Seeding the database checkpoint
 gem 'faker'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Adding on my own to provide better looking data view at console
+gem 'hirb'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+# Checkpoint 10 - User Auth
+gem 'devise'
