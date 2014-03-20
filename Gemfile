@@ -50,3 +50,6 @@ gem 'hirb'
 
 # Checkpoint 10 - User Auth
 gem 'devise'
+
+# Checkpoint  12 - Authorization
+gem 'pundit'
