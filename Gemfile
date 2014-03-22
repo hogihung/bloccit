@@ -53,3 +53,6 @@ gem 'devise'
 
 # Checkpoint  12 - Authorization
 gem 'pundit'
+
+# Checkpoint 16 - Post Markdown
+gem 'redcarpet'
