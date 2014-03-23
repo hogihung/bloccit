@@ -66,4 +66,8 @@ gem 'figaro'
 # Adding on my own - pry support
 gem 'pry-rails', :group => :development
 
+# Checkpoint 18 - Pagination
+gem 'will_paginate', '~> 3.0.5'
+
+
 
