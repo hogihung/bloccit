@@ -56,3 +56,11 @@ gem 'pundit'
 
 # Checkpoint 16 - Post Markdown
 gem 'redcarpet'
+
+# Checkpoint 17 - Uploading Images
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+gem 'figaro'
+
+
