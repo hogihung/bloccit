@@ -63,4 +63,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
 
+# Adding on my own - pry support
+gem 'pry-rails', :group => :development
+
 
