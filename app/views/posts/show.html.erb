@@ -8,6 +8,10 @@
     </small>
     <p><%= markdown @post.body %></p>
     <%= image_tag(@post.image) if @post.image? %>
+
+    <%= form_for [@post.topic, @post, @post.comments.build] do |f| %>
+      <%= render partial: 'comments/form', locals: {f: f} %>
+    <% end %>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
@@ -15,3 +19,5 @@
     <% end %>
   </div>
 </div>
+  <%= render partial: 'comments/comment' %>
+
