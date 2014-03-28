@@ -30,6 +30,7 @@ end
       body: Faker::Lorem.paragraph)
     # set the created_at to a time within the past year
     post.update_attribute(:created_at, Time.now - rand(600..31536000))
+    post.update_rank
 
     comment = Comment.create(
       body: Faker::Lorem.paragraph,
