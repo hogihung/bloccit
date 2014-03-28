@@ -5,13 +5,9 @@ Bloccit::Application.routes.draw do
   
   resources :topics do
     resources :posts, except: [:index] do 
-      resources :comments, only: [:create] #New Comment checkpoint
+      resources :comments, only: [:create, :destroy]
     end
   end
-
-  #resources :posts do
-  #  resources :comments, only: [:create] #New Comment checkpoint
-  #end
 
 
   match "about", to: 'welcome#about', via: :get
