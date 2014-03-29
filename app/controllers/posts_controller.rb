@@ -2,8 +2,9 @@ class PostsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:topic_id])
+    authorize @topic
     @post = Post.find(params[:id])
-    @comments = @post.comments.all #wtf
+    @comments = @post.comments.all   # note: Private Topic checkpoint shows different code here ***
   end
 
   def new
