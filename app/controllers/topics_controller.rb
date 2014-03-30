@@ -12,7 +12,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     authorize @topic
-    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
+    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 10)
   end
 
   def edit
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
       flash[:error] = "There was an error creating the topic.  Please try again."
       render :new
     end
-  end  
+  end
 
   def update
     @topic = Topic.find(params[:id])
@@ -39,7 +39,7 @@ class TopicsController < ApplicationController
     else
       flash[:error] = "There was an error saving the topic.  Please try again."
       render :edit
-    end 
+    end
   end
 
   def destroy

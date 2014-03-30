@@ -6,6 +6,7 @@ class FavoriteMailer < ActionMailer::Base
     @post    = post
     @comment = comment
 
+    # For our own real app, change the @your-app-name-example to be a real value of your app.
     headers["Message-ID"]  = "<comments/#{@comment.id}@your-app-name-example>"
     headers["In-Reply-To"] = "<post/#{@post.id}@your-app-name-example>"
     headers["References"]  = "<post/#{@post.id}@your-app-name-example>"
