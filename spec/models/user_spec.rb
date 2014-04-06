@@ -19,7 +19,7 @@ describe User do
         c =user.comments.build(attributes_for(:comment))
         c.post = post
         c.save
-        post = user.post.build(attributes_for(:post))
+        post = user.posts.build(attributes_for(:post))  # had an error here that I fixed.  I had user.post.build ***
         post.topic = topic
         post.save
         c = user.comments.build(attributes_for(:comment))
