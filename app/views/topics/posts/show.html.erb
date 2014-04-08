@@ -10,7 +10,7 @@
     <p><%= markdown @post.body %></p>
     <%= image_tag(@post.image) if @post.image? %>
 
-    <%= form_for [@post.topic, @post, @post.comments.build] do |f| %>
+    <%= form_for [@post.topic, @post, @post.comments.build], remote: true do |f| %>
       <%= render partial: 'comments/form', locals: {f: f} %>
     <% end %>
   </div>
@@ -35,5 +35,6 @@
 
 <hr />
 <h2 class ='js-comments-count'><%= @comments.count %> Comments</h2>
-
-<%= render partial: 'comments/comment', collection: @comments %>
+<div class="js-comments">
+  <%= render partial: 'comments/comment', collection: @comments %>
+</div>

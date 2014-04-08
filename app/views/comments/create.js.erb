@@ -1,0 +1,7 @@
+<% if @comment.valid? %>
+  $('.js-comments').prepend("<%= escape_javascript(render(@comment)) %>");
+  $('.new_comment').find("input[type=text], textarea").val("");
+  $('.js-comments-count').html("<%= @post.comments.count %> Comments");
+<% else %>
+  alert("Please  add a body to a  comment");
+<% end %>
